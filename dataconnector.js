@@ -21,7 +21,7 @@ function schemaObject(columns = {}) {
   let _data = [];
 
   // Define the schema
-  myConnector.getSchema = async function (schemaCallback) {
+  myConnector.getSchema = function (schemaCallback) {
     getDhis2Data(tableau.username, tableau.password)
       .then((data) => data.json())
       .then((data) => {
